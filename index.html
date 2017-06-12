@@ -46,13 +46,15 @@
   mouse_down = true;
   console.log('DOWN', event.offsetX, event.offsetY);
 });
+
 canvas.addEventListener('mouseup', function (event) {
   mouse_down = false;
-  console.log('up', event.offsetX, event.offsetY);
+  console.log('UP', event.offsetX, event.offsetY);
 });
+
 canvas.addEventListener('mousemove', function (event) {
   if (mouse_down) {
-    console.log('move', event.offsetX, event.offsetY);
+    console.log('MOVE', event.offsetX, event.offsetY);
   }
 });
   </script>
