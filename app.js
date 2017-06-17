@@ -52,3 +52,10 @@ chargebee.configure({site : "<<site_name>>",
           if(error){
             //handle error
             console.log(error);
+
+          }else{
+        console.log(result);
+        var subscription = result.subscription;
+        res.writeHead(200, {
+           'content-type': 'text/plain'
+        });
