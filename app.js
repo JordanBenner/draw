@@ -44,3 +44,11 @@ chargebee.configure({site : "<<site_name>>",
   app.get('/', function(req, res){
     res.sendFile(__dirname + '/form.html');
   });
+
+  app.post('/subscribe', function(req, res){
+        var params = req.body;// getting form params as JSON
+        params['plan_id']='enterprise'; // plan id that is present in your Chargebee site
+        chargebee.subscription.create(params).request(function(error,result){
+          if(error){
+            //handle error
+            console.log(error);
