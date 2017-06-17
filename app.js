@@ -59,3 +59,9 @@ chargebee.configure({site : "<<site_name>>",
         res.writeHead(200, {
            'content-type': 'text/plain'
         });
+
+        res.write('Successfully created subscription\n\n' + 'id :: '+ subscription.id);
+          res.end();
+       }
+     });
+});
