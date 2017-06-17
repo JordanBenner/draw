@@ -40,4 +40,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 chargebee.configure({site : "<<site_name>>",
   api_key : "<<api_key>>"
-};
+
+  app.get('/', function(req, res){
+    res.sendFile(__dirname + '/form.html');
+  });
